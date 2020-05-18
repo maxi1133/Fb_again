@@ -20,6 +20,20 @@ mongoose.connect('mongodb+srv://maxi1133:123456789z@cluster0-jskdr.mongodb.net/t
 
 
 
+
+//////////////// Import Class
+const Account = require('./Models/Account')
+const Blog = require('./Models/Blog')
+// var a = new Account()
+// a.taikhoan = "qwe"
+// a.save().then(()=>{console.log("something")})
+// Account.find({taikhoan:"qwe"},(err,kq)=>{
+//   console.log()
+// })
+
+
+
+
 ////////////// ROUTE
 app.use("/", (req, res) => {
   res.send('Welcome !')
