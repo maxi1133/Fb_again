@@ -4,6 +4,7 @@ const app = express();
 
 
 
+
 ////////////// middle ware
 const bodyparser = require("body-parser");
 const cors = require("cors");
@@ -14,42 +15,29 @@ app.use(cors());
 
 
 
+
+
 //////////////// Connect DB
-const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://maxi1133:123456789z@cluster0-jskdr.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+const mongoose = require("mongoose");
+mongoose.connect("mongodb+srv://maxi1133:123456789z@cluster0-jskdr.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true })
 
 
 
 
-//////////////// Import Class
-const Account = require('./Models/Account')
-const Blog = require('./Models/Blog')
-// var a = new Account()
-// a.taikhoan = "qwe"
-// a.save().then(()=>{console.log("something")})
-// Account.find({taikhoan:"qwe"},(err,kq)=>{
-//   console.log()
-// })
+
+//////////////      ROUTE
+const AccountRoute = require('./func/AcountFunc')
+app.use('/Account',AccountRoute)
 
 
 
 
-////////////// ROUTE
-app.use("/", (req, res) => {
-  res.send('Welcome !')
-});
 
-
-
-
-/////////////////   SERVER
+//////////////      SERVER
 const port = 4000;
 var http = require("http");
 var server = http.createServer(app);
-server.listen(port, () => {
-  console.log("server listen on port :" + port);
-});
-
+server.listen( port, () => { console.log("Server listen on port : " + port) } );
 
 
 
@@ -60,9 +48,5 @@ server.listen(port, () => {
 const io = require("socket.io").listen(server);
 
 io.on("connection", (socket) => {
-
-
-  socket.on("disconect", () => {
-
-  });
+  socket.on("disconect", () => {});
 });

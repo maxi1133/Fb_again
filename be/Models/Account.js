@@ -8,9 +8,13 @@ var AccountSchema = new Schema({
   ho: String,
   ten: String,
   ngaysinh: Date,
-
+  createdate : Date,
+  avatar: { type: String, default: "" },
+  totalsignin : Number,
+  online : Boolean,
+  
 });
 
-var Account = mongoose.model("Account",AccountSchema)
+var Account = mongoose.model("Account", AccountSchema);
 
 module.exports = Account
