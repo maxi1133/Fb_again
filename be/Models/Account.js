@@ -8,10 +8,17 @@ var AccountSchema = new Schema({
   ho: String,
   ten: String,
   ngaysinh: Date,
-  createdate : Date,
+
   avatar: { type: String, default: "" },
+  
+  friendlist : Array,
+  blogslist : Array,
+  
+  
+  createdate : Date,
   totalsignin : Number,
   online : Boolean,
+  lastsignin : Date,
   
 });
 

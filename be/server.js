@@ -20,6 +20,7 @@ app.use(cors());
 //////////////// Connect DB
 const mongoose = require("mongoose");
 mongoose.connect("mongodb+srv://maxi1133:123456789z@cluster0-jskdr.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true })
+.then(()=>{console.log('DB Connected !')})
 
 
 
@@ -37,7 +38,9 @@ app.use('/Account',AccountRoute)
 const port = 4000;
 var http = require("http");
 var server = http.createServer(app);
-server.listen( port, () => { console.log("Server listen on port : " + port) } );
+server.listen( port, () => { 
+  console.log("Server listen on port : " + port) 
+});
 
 
 

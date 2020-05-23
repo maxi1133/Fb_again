@@ -17,7 +17,7 @@ class Login extends Component {
                     <div className="col-md-5">
                         <div className="form-group">
                             <h1>Tạo tài khoản mới</h1>
-                            <p style={{ fontSize: "20px" }}>Nhanh chóng và dễ vãi luôn á.</p>
+                            <p style={{ fontSize: "20px" }}>Nhanh chóng và dễ vl !</p>
                             <div>
                                 <input className="ho form-control" placeholder="Họ" />
                             </div>
@@ -25,13 +25,25 @@ class Login extends Component {
                                 <input className="ten form-control" placeholder="Tên" />
                             </div>
                             <div>
+                                <input type='date' className="form-control" />
+                            </div>
+                            <div>
                                 <input className="form-control" placeholder="Số di động hoặc Email" />
                             </div>
                             <div>
-                                <input className="form-control" placeholder="Mật khẩu mới" />
+                                <input className="form-control" placeholder="Mật khẩu" />
                             </div>
                             <div>
-                                <button style={{ marginLeft: "245px", width: "200px" }} className="btn btn-danger">Đăng ký</button>
+                                <input className="form-control" placeholder="Nhập lại mật khẩu" />
+                            </div>
+                            <div>
+                                <button style={{ marginLeft: "245px", width: "200px" }} 
+                                className="btn btn-danger" 
+                                onClick={e => {
+
+                                }}>
+                                    Đăng ký
+                                </button>
                             </div>
                         </div>
                     </div>
