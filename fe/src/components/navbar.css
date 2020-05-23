@@ -1,0 +1,62 @@
+#header {
+    height: 60px;
+}
+.header-login {
+    background-color: black;
+}
+.tkmk {
+    margin-top: 10px;
+    width: 150px;
+    margin-right: 10px;
+}
+.button-login {
+    width: 90px;
+}
+input.form-control.input-search {
+    margin-top: 15px;
+}
+li.fa.fa-search {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 25px;
+    margin-bottom: 20px;
+}
+
+.h1-color {
+    color: pink;
+    margin: 10px;
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+li.fa.icon-nav {
+    margin-top: 12px;
+    margin-right: 20px;
+    font-size: 1.5em;
+    background: none;
+}
+button.h1-color {
+    background: none;
+    border: black;
+}
+.form-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-1 {
+    display: flex;
+}
+.home-1 div {
+    padding: 10px;
+}
+.home-left {
+    flex: 3;
+}
+.home-mid {
+    flex: 6;
+}
+.home-right {
+    flex: 3;
+}
