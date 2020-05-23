@@ -9,7 +9,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <Navbar></Navbar>
+                <Navbar/>
                 <div className="container">
                     <div className="col-md-7">
 

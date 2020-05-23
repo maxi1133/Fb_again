@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import NavHome from './navHome'
 
 class Home extends Component {
     render() {
