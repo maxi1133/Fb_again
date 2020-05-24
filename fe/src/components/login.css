@@ -1,22 +1,25 @@
 #dashboard {
-    height: 90vh;
-    background-image: url(/images/offer.png);
-    background-position: center;
-    background-size: cover;
-    width: 55%;
-    position: absolute;
-    top: 80px;
-    left: 0;
+  height: 90vh;
+  background-image: url(/images/offer.png);
+  background-position: center;
+  background-size: cover;
+  width: 55%;
+  position: absolute;
+  top: 80px;
+  left: 0;
 }
 
 .ho {
-    float: left;
-    width: 210px;
+  float: left;
+  width: 210px;
 }
 .ten {
-    float: right;
-    width: 210px;
+  float: right;
+  width: 210px;
 }
 .form-control {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+/* .hello-login {
+  background-color: black;
+} */
