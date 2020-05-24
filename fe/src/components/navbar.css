@@ -1,54 +1,122 @@
 .tkmk {
-    margin-top: 10px;
-    width: 150px;
-    margin-right: 10px;
+  margin-top: 5px;
+  width: 150px;
+  margin-right: 10px;
 }
+/* .header-login {
+  height: 80px;
+  background-color: black;
+} */
 .button-login {
-    width: 90px;
+  margin-top: 5px;
+  width: 90px;
 }
 .navbar-color {
-    height: 80px;
-    background-color: black;
+  height: 80px;
+  background-color: black;
 }
 input.form-control.input-search {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .h1-color {
-    color: pink;
-    margin: 10px;
-    float: right;
-    display: flex;
+  color: pink;
+  margin: 10px;
+  float: right;
+  display: flex;
 }
 li.fa.icon-nav {
-    margin-top: 12px;
-    margin-right: 20px;
-    font-size: 1.5em;
-    background: none;
-    display: flex;
-    align-items: flex-start;
+  margin-top: 12px;
+  margin-right: 20px;
+  font-size: 1.5em;
+  background: none;
+  align-items: center;
 }
 button.h1-color {
-    background: none;
-    border: black;
+  background: none;
+  border: black;
 }
 .form-home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .home-1 {
-    display: flex;
+  display: flex;
 }
 .home-1 div {
-    padding: 10px;
+  padding: 10px;
 }
 .home-left {
-    flex: 3;
+  flex: 4;
 }
 .home-mid {
-    flex: 6;
+  flex: 5;
 }
 .home-right {
-    flex: 3;
+  flex: 3;
 }
+
+.icon-navhome {
+  display: flex;
+}
+/* css of mid with new blog */
+.postSTT {
+  background-color: #fff;
+  border-radius: 1em;
+  width: 500px;
+  height: 160px;
+}
+
+img {
+  border-radius: 60%;
+  float: left;
+  cursor: pointer;
+}
+.new-stt {
+  background-color: #f2f3f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  margin-left: 80px;
+  border-radius: 10px;
+  width: 350px;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+.new-stt:hover {
+  background-color: #d8d8d8;
+}
+.box-img-icon {
+  display: flex;
+  border-top: solid 1px;
+}
+.add-img {
+  flex: 6;
+}
+.add-icon {
+  flex: 6;
+}
+.btn-img {
+  background: none;
+  border: none;
+}
+.btn-img:hover {
+  background-color: #d8d8d8;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+}
+
+.btn-icon:hover {
+  background: #d8d8d8;
+  border: none;
+  border-radius: 5px;
+}
+/* css of mid with new blog */
