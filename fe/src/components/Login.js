@@ -4,11 +4,12 @@ import Navbar from './Navbar'
 import Home from './Home'
 
 import Axios from 'axios'
+import sw from 'sweetalert2'
 
 
 class Login extends Component {
 
-    
+
     render() {
         return (
             <div>
@@ -76,8 +77,16 @@ class TrungGian extends Component {
         Axios
         .post('http://localhost:4000/Account/SignIn',{taikhoan:TK,matkhau : MK})
         .then(res => {
-            console.log(res.data)
-            this.setState({isSignIn : true})
+            
+            if(res.data.stt)
+            {
+                sw.fire({text:'WelCome !' , timer:700 , icon:'success'})
+                this.setState({isSignIn : true})
+            }
+            else {
+                sw.fire({title:'Opps!',text : res.data.msg,icon:'error',timer:800})
+            }
+            
         })
     }
 
