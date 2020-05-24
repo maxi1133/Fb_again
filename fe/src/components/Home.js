@@ -5,7 +5,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <NavHome></NavHome>
+                {/* <NavHome></NavHome> */}
                 <div className="home-1">
                     <div className="home-left">
                         <h1>Left</h1>

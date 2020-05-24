@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './login.css'
 import Navbar from './Navbar'
+import Home from './Home'
+
+import Axios from 'axios'
 
 
 class Login extends Component {
 
-
+    
     render() {
         return (
             <div>
-                <Navbar/>
+                <Navbar SignIn = {this.props.SignIn} />
                 <div className="container">
                     <div className="col-md-7">
 
@@ -58,4 +61,45 @@ class Login extends Component {
     }
 }
 
-export default Login;
+
+class TrungGian extends Component {
+    constructor(props) 
+    {
+        super(props)
+        this.state = { 
+            isSignIn : false
+        }
+    }
+
+    SignIn = (TK,MK) => 
+    {
+        Axios
+        .post('http://localhost:4000/Account/SignIn',{taikhoan:TK,matkhau : MK})
+        .then(res => {
+            console.log(res.data)
+            this.setState({isSignIn : true})
+        })
+    }
+
+
+    render() 
+    {
+        let route 
+        if(this.state.isSignIn) 
+        {
+            route = <Home />
+        }   
+        else 
+        {
+            route = <Login SignIn = {this.SignIn} />
+        }
+        return route
+    }
+
+}
+
+
+export default TrungGian;
+
+
+
