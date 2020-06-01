@@ -3,10 +3,7 @@
   width: 150px;
   margin-right: 10px;
 }
-/* .header-login {
-  height: 80px;
-  background-color: black;
-} */
+
 .button-login {
   margin-top: 5px;
   width: 90px;
@@ -17,6 +14,7 @@
 }
 input.form-control.input-search {
   margin-top: 15px;
+  width: 400px;
 }
 
 .h1-color {
@@ -25,12 +23,17 @@ input.form-control.input-search {
   float: right;
   display: flex;
 }
+
+.h1-color:hover {
+  background-color: #d8d8d8;
+  color: black;
+  border-radius: 5px;
+}
+
 li.fa.icon-nav {
-  margin-top: 12px;
-  margin-right: 20px;
+  margin: 10px;
   font-size: 1.5em;
   background: none;
-  align-items: center;
 }
 button.h1-color {
   background: none;
@@ -44,18 +47,41 @@ button.h1-color {
 .home-1 {
   display: flex;
 }
-.home-1 div {
+/* .home-1 div {
   padding: 10px;
-}
+} */
+
 .home-left {
   flex: 4;
+  padding-top: 10px;
 }
 .home-mid {
   flex: 5;
+  padding-top: 10px;
 }
 .home-right {
   flex: 3;
+  padding-top: 10px;
 }
+
+/* for-navHome */
+.home-11 {
+  display: flex;
+}
+
+.home-left-1 {
+  flex: 4;
+  padding-top: 10px;
+}
+.home-mid-1 {
+  flex: 5;
+  padding-top: 10px;
+}
+.home-right-1 {
+  flex: 3;
+  padding-top: 10px;
+}
+/* for-navHome */
 
 .icon-navhome {
   display: flex;
@@ -65,7 +91,10 @@ button.h1-color {
   background-color: #fff;
   border-radius: 1em;
   width: 500px;
-  height: 160px;
+
+  height: 140px;
+  margin-bottom: 15px;
+  padding: 15px;
 }
 
 img {
@@ -79,12 +108,13 @@ img {
   justify-content: center;
   align-items: center;
   min-height: 40px;
-  margin-left: 80px;
-  border-radius: 10px;
-  width: 350px;
+  margin-left: 50px;
+  border-radius: 20px;
+  width: 420px;
+  margin-top: 15px;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 11px;
 }
 .new-stt:hover {
   background-color: #d8d8d8;
@@ -92,16 +122,22 @@ img {
 .box-img-icon {
   display: flex;
   border-top: solid 1px;
+  margin-top: 25px;
 }
 .add-img {
   flex: 6;
+  margin-top: 7px;
+  text-align: center;
 }
 .add-icon {
   flex: 6;
+  margin-top: 7px;
+  text-align: center;
 }
 .btn-img {
   background: none;
   border: none;
+  padding: 5px;
 }
 .btn-img:hover {
   background-color: #d8d8d8;
@@ -112,6 +148,7 @@ img {
 .btn-icon {
   background: none;
   border: none;
+  padding: 5px;
 }
 
 .btn-icon:hover {
@@ -120,3 +157,71 @@ img {
   border-radius: 5px;
 }
 /* css of mid with new blog */
+
+/* css of blog box */
+.blog-box {
+  background-color: #fff;
+  border-radius: 1em;
+  width: 500px;
+  padding: 15px;
+}
+.edit-blog {
+  position: absolute;
+}
+.avt-handlename {
+  display: flex;
+}
+.handle-name-blog {
+  width: 200px;
+}
+.time-blog {
+  width: 200px;
+}
+.handlename-time-box {
+  margin-left: 20px;
+}
+
+.like-cmt-box-count {
+  display: flex;
+  align-items: flex-end;
+  border-bottom: black solid 1px;
+}
+.Like-box-count {
+  flex: 6;
+}
+.cmt-box-count {
+  flex: 6;
+  text-align: end;
+}
+
+.like-cmt-button {
+  display: flex;
+  margin-top: 7px;
+}
+.like-box {
+  flex: 6;
+  text-align: center;
+}
+.cmt-box {
+  flex: 6;
+  text-align: center;
+}
+.like-box button {
+  width: 100px;
+  border: none;
+  background: none;
+}
+.like-box button:hover {
+  background: #d8d8d8;
+  border-radius: 5px;
+}
+.cmt-box button {
+  width: 100px;
+  border: none;
+  background: none;
+}
+.cmt-box button:hover {
+  background: #d8d8d8;
+  border-radius: 5px;
+}
+/* css of blog box */

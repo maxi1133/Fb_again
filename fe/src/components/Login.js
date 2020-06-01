@@ -13,7 +13,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <Navbar SignIn = {this.props.SignIn} />
+                <Navbar SignIn={this.props.SignIn} />
                 <div className="container">
                     <div className="col-md-7">
 
@@ -41,11 +41,11 @@ class Login extends Component {
                                 <input className="form-control" placeholder="Nhập lại mật khẩu" />
                             </div>
                             <div>
-                                <button style={{ marginLeft: "245px", width: "200px" }} 
-                                className="btn btn-danger" 
-                                onClick={e => {
+                                <button style={{ marginLeft: "245px", width: "200px" }}
+                                    className="btn btn-danger"
+                                    onClick={e => {
 
-                                }}>
+                                    }}>
                                     Đăng ký
                                 </button>
                             </div>
@@ -64,43 +64,38 @@ class Login extends Component {
 
 
 class TrungGian extends Component {
-    constructor(props) 
-    {
+    constructor(props) {
         super(props)
-        this.state = { 
-            isSignIn : false
+        this.state = {
+            isSignIn: false
         }
     }
 
-    SignIn = (TK,MK) => 
-    {
+    SignIn = (TK, MK) => {
         Axios
-        .post('http://localhost:4000/Account/SignIn',{taikhoan:TK,matkhau : MK})
-        .then(res => {
-            
-            if(res.data.stt)
-            {
-                sw.fire({text:'WelCome !' , timer:700 , icon:'success'})
-                this.setState({isSignIn : true})
-            }
-            else {
-                sw.fire({title:'Opps!',text : res.data.msg,icon:'error',timer:800})
-            }
-            
-        })
+            .post('http://localhost:4000/Account/SignIn', { taikhoan: TK, matkhau: MK })
+            .then(res => {
+
+                if (res.data.stt) {
+                    sw.fire({ text: 'WelCome !', timer: 700, icon: 'success' })
+                    localStorage.setItem('token', 'abcaksjdkasdkasdjklasd')
+                    this.setState({ isSignIn: true })
+                }
+                else {
+                    sw.fire({ title: 'Opps!', text: res.data.msg, icon: 'error', timer: 800 })
+                }
+
+            })
     }
 
 
-    render() 
-    {
-        let route 
-        if(this.state.isSignIn) 
-        {
+    render() {
+        let route
+        if (this.state.isSignIn) {
             route = <Home />
-        }   
-        else 
-        {
-            route = <Login SignIn = {this.SignIn} />
+        }
+        else {
+            route = <Login SignIn={this.SignIn} />
         }
         return route
     }
