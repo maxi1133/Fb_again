@@ -7,16 +7,9 @@ BlogRoute.route('/').get(function (req, res) {
     Blog.find()
         .exec()
         .then(data => {
-            if (!data) {
-                res.status(404).json({
-                    message: 'Not found any Blog'
-                })
-            }
-            else {
-                res.status(200).json({
-                    data: data
-                })
-            }
+            res.status(200).json(
+                data
+            )
         })
         .catch(err => {
             res.status(500).json({
@@ -54,9 +47,9 @@ BlogRoute.route('/:blogID').post(function (req, res) {
         .exec()
         .then(data => {
             if (data) {
-                res.status(200).json({
-                    data: data
-                })
+                res.status(200).json(
+                    data
+                )
             }
             else {
                 res.status(404).json({
