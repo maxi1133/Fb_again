@@ -19,8 +19,8 @@ app.use(cors());
 
 //////////////// Connect DB
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://maxi1133:123456789z@cluster0-jskdr.mongodb.net/test?retryWrites=true&w=majority",{ useNewUrlParser: true, useUnifiedTopology: true })
-.then(()=>{console.log('DB Connected !')})
+mongoose.connect("mongodb+srv://maxi1133:123456789z@cluster0-jskdr.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => { console.log('DB Connected !') })
 
 
 
@@ -28,7 +28,10 @@ mongoose.connect("mongodb+srv://maxi1133:123456789z@cluster0-jskdr.mongodb.net/t
 
 //////////////      ROUTE
 const AccountRoute = require('./func/AcountFunc')
-app.use('/Account',AccountRoute)
+app.use('/Account', AccountRoute)
+
+const BlogRoute = require('./func/BlogFunc')
+app.use('/Blog', BlogRoute)
 
 
 
@@ -38,8 +41,8 @@ app.use('/Account',AccountRoute)
 const port = 4000;
 var http = require("http");
 var server = http.createServer(app);
-server.listen( port, () => { 
-  console.log("Server listen on port : " + port) 
+server.listen(port, () => {
+  console.log("Server listen on port : " + port)
 });
 
 
@@ -52,7 +55,7 @@ const io = require("socket.io").listen(server);
 
 io.on("connection", (socket) => {
 
-  
+
   socket.on("disconect", () => {
 
   });
